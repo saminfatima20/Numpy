@@ -1,0 +1,21 @@
+
+arr_1d = np.array([1, 2, 3, 4, 5])
+print("1D Array:", arr_1d)
+
+arr_2d = np.array([[1, 2, 3], [4, 5, 6]])
+print("2D Array:\n", arr_2d)
+
+arr_range = np.arange(0, 10, 2)  # Start, stop (exclusive), step
+print("Array with range:", arr_range)
+
+arr_zeros = np.zeros((3, 3))
+print("Array of zeros:\n", arr_zeros)
+
+arr_ones = np.ones((2, 4))
+print("Array of ones:\n", arr_ones)
+
+arr_reshaped = np.arange(12).reshape(3, 4)
+print("Reshaped Array:\n", arr_reshaped)
+
+print("Element at [0, 1] in arr_2d:", arr_2d[0, 1])
+print("First row of arr_2d:", arr_2d[0, :])
