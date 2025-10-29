@@ -1,0 +1,16 @@
+import numpy as np
+
+arr1 = np.array([1, 2, 3, 4, 5])
+print("1D Array:", arr1)
+
+arr2 = np.array([[1, 2, 3], [4, 5, 6]])
+print("2D Array:\n", arr2)
+
+arr_range = np.arange(0, 10, 2) # Start, Stop (exclusive), Step
+print("Array from arange:", arr_range)
+
+zeros_arr = np.zeros((3, 3))
+print("Array of zeros:\n", zeros_arr)
+
+print("arr1 * 2:", arr1 * 2)
+print("arr2 + 10:\n", arr2 + 10)
