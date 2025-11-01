@@ -1,0 +1,15 @@
+
+arr = np.arange(9)
+reshaped_arr = arr.reshape((3, 3))
+print("Reshaped Array:\n", reshaped_arr)
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+vstacked_arr = np.vstack((a, b))
+print("Vertically Stacked Array:\n", vstacked_arr)
+
+hstacked_arr = np.hstack((a, b))
+print("Horizontally Stacked Array:", hstacked_arr)
+
+reversed_arr = np.flipud(arr)
+print("Reversed Array:", reversed_arr)
