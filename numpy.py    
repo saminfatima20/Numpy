@@ -1,0 +1,17 @@
+
+arr1d = np.array([1, 2, 3, 4, 5])
+print("1D Array:", arr1d)
+
+arr2d = np.array([[1, 2, 3], [4, 5, 6]])
+print("2D Array:\n", arr2d 
+arr_range = np.arange(0, 10, 2) # start, stop (exclusive), step
+print("Array from range:", arr_range)
+
+zeros_array = np.zeros((2, 3))
+print("Zeros Array:\n", zeros_array)
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+print("Addition:", a + b)
+print("Multiplication:", a * b)
+print("Scalar multiplication:", a * 2)
