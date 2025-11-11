@@ -1,0 +1,21 @@
+import numpy as np
+
+a = np.array([10, 20, 30, 40])
+b = np.array([1, 2, 3, 4])
+
+add_result = a + b
+print("Addition:", add_result)
+
+sub_result = a - b
+print("Subtraction:", sub_result)
+
+mul_result = a * b
+print("Multiplication:", mul_result)
+
+div_result = a / b
+print("Division:", div_result)
+
+matrix_a = np.array([[1, 2], [3, 4]])
+matrix_b = np.array([[5, 6], [7, 8]])
+dot_product = matrix_a.dot(matrix_b)
+print("Dot Product:\n", dot_product)
