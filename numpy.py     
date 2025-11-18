@@ -1,0 +1,16 @@
+import numpy as np
+
+def create_checkerboard(n):
+    """
+    Creates an n x n checkerboard pattern using 0s and 1s.
+    """
+    checkerboard = np.zeros((n, n), dtype=int)
+    
+    checkerboard[::2, ::2] = 1 # Every other row, every other column
+    checkerboard[1::2, 1::2] = 1 # Starting from the second element, every other row/column
+    
+
+    return checkerboard
+board_size = 6
+checkerboard_pattern = create_checkerboard(board_size)
+print(f"{board_size}x{board_size} Checkerboard Pattern:\n{checkerboard_pattern}")
