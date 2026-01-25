@@ -1,0 +1,17 @@
+import numpy as np
+from data import generate_data
+from model import LinearRegression
+
+X, y = generate_data(200)
+
+model = LinearRegression(learning_rate=0.1, epochs=1000)
+model.fit(X, y)
+
+predictions = model.predict(X)
+
+mse = np.mean((predictions - y) ** 2)
+
+print("Final parameters (theta):")
+print(model.theta)
+
+print("\nMean Squared Error:", mse)
