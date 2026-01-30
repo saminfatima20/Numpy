@@ -1,0 +1,32 @@
+import numpy as np
+
+scores = np.array([
+    [85, 78, 92],
+    [70, 88, 75],
+    [90, 91, 89],
+    [60, 65, 70],
+    [95, 93, 97]
+])
+
+print("Student Scores:\n", scores)
+
+student_avg = np.mean(scores, axis=1)
+print("\nAverage score per student:", student_avg)
+
+subject_avg = np.mean(scores, axis=0)
+print("Average score per subject:", subject_avg)
+
+print("\nHighest score overall:", np.max(scores))
+print("Lowest score overall:", np.min(scores))
+
+passed_students = student_avg >= 75
+print("\nPassed students (True = Passed):", passed_students)
+
+min_score = np.min(scores)
+max_score = np.max(scores)
+normalized_scores = (scores - min_score) / (max_score - min_score)
+
+print("\nNormalized Scores:\n", normalized_scores)
+
+grace_scores = scores + 5
+print("\nScores after grace marks:\n", grace_scores)
