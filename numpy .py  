@@ -1,0 +1,10 @@
+import numpy as np
+
+dice_rolls = np.random.randint(1, 7, size=1000)
+
+print("Dice rolls:\n", dice_rolls)
+
+values, counts = np.unique(dice_rolls, return_counts=True)
+
+for v, c in zip(values, counts):
+    print(f"Number {v} appeared {c} times")
