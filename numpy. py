@@ -1,0 +1,32 @@
+import numpy as np
+students = np.array(["Alice", "Bob", "Charlie", "David", "Eva"])
+
+marks = np.array([
+    [85, 78, 92],
+    [70, 88, 75],
+    [90, 91, 89],
+    [60, 65, 70],
+    [88, 79, 85]
+])
+
+print("Student Marks:\n", marks)
+
+student_avg = np.mean(marks, axis=1)
+print("\nAverage marks per student:")
+for i in range(len(students)):
+    print(students[i], ":", round(student_avg[i], 2))
+
+subject_avg = np.mean(marks, axis=0)
+subjects = ["Math", "Science", "English"]
+
+print("\nAverage marks per subject:")
+for i in range(len(subjects)):
+    print(subjects[i], ":", round(subject_avg[i], 2))
+
+print("\nHighest mark in class:", np.max(marks))
+print("Lowest mark in class:", np.min(marks))
+
+overall_avg = np.mean(marks)
+print("\nOverall class average:", round(overall_avg, 2))
+
+print("\nStudents scoring above overall
