@@ -1,0 +1,44 @@
+import numpy as np
+
+np.random.seed(42)
+
+marks = np.random.randint(40, 101, size=(10, 5))
+
+print("Student Marks (10 Students × 5 Subjects):\n")
+print(marks)
+
+print("\nOverall Statistics:")
+print("Average Marks:", np.mean(marks))
+print("Median Marks:", np.median(marks))
+print("Standard Deviation:", np.std(marks)
+
+student_averages = np.mean(marks, axis=1)
+top_student_index = np.argmax(student_averages)
+
+print("\nStudent Average Marks:")
+print(student_averages)
+
+print(f"\nTop Performer: Student {top_student_index + 1}")
+print("Average Marks:", student_averages[top_student_index])
+
+subject_averages = np.mean(marks, axis=0)
+
+print("\nSubject-wise Average Marks:")
+for i, avg in enumerate(subject_averages):
+    print(f"Subject {i+1}: {avg:.2f}")
+
+def assign_grade(avg):
+    if avg >= 85:
+        return "A"
+    elif avg >= 70:
+        return "B"
+    elif avg >= 55:
+        return "C"
+    else:
+        return "D"
+
+grades = np.array([assign_grade(avg) for avg in student_averages])
+
+print("\nFinal Grades:")
+for i, grade in enumerate(grades):
+    print(f"Student {i+1}: Grade {grade}")
