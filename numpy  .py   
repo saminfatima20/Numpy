@@ -1,0 +1,18 @@
+import numpy as np
+
+marks = np.array([
+    [85, 78, 92],
+    [70, 88, 80],
+    [90, 76, 85],
+    [60, 65, 70],
+    [95, 89, 93]
+])
+
+student_avg = np.mean(marks, axis=1)
+
+subject_avg = np.mean(marks, axis=0)
+
+print("Student Averages:", student_avg)
+print("Subject Averages:", subject_avg)
+print("Highest Mark:", np.max(marks))
+print("Lowest Mark:", np.min(marks))
