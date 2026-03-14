@@ -1,0 +1,15 @@
+import numpy as np
+
+A = np.array([[2, 4], [6, 8]])
+B = np.array([[1, 3], [5, 7]])
+
+print("Matrix A:\n", A)
+print("Matrix B:\n", B)
+
+print("\nAddition:\n", A + B)
+
+print("\nMultiplication:\n", np.dot(A, B))
+
+print("\nTranspose of A:\n", A.T)
+
+print("\nDeterminant of A:", np.linalg.det(A))
