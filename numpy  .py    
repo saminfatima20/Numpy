@@ -1,0 +1,37 @@
+import numpy as np 
+
+np.random.seed(42)  # for reproducibility
+scores = np.random.randint(40, 100, size=(10, 5))
+
+print("Student Scores (rows = students, columns = subjects):\n")
+print(scores)
+
+average_score = np.mean(scores)
+max_score = np.max(scores)
+min_score = np.min(scores)
+
+print("\n--- Overall Statistics ---")
+print("Average Score:", average_score)
+print("Highest Score:", max_score)
+print("Lowest Score:", min_score)
+
+student_averages = np.mean(scores, axis=1)
+
+print("\n--- Student Averages ---")
+for i, avg in enumerate(student_averages):
+    print(f"Student {i+1}: {avg:.2f}")
+
+top_student = np.argmax(student_averages)
+print(f"\nTop Performer: Student {top_student + 1}")
+
+subject_averages = np.mean(scores, axis=0)
+
+print("\n--- Subject Averages ---")
+for i, avg in enumerate(subject_averages):
+    print(f"Subject {i+1}: {avg:.2f}")
+
+high_scorers = np.where(scores > 80)
+
+print("\n--- Scores above 80 ---")
+for student, subject in zip(*high_scorers):
+    print(f"Student {student+1} scored {scores[student, subject]} in Subject {subject+1}")
