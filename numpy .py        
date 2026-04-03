@@ -1,0 +1,32 @@
+import numpy as np
+
+scores = np.array([
+    [78, 85, 82],
+    [90, 88, 92],
+    [65, 70, 68],
+    [88, 76, 90],
+    [50, 60, 55]
+])
+
+print("Student Scores:\n", scores)
+
+student_avg = np.mean(scores, axis=1)
+print("\nAverage score per student:\n", student_avg)
+
+subject_avg = np.mean(scores, axis=0)
+print("\nAverage score per subject:\n", subject_avg)
+
+print("\nHighest score:", np.max(scores))
+print("Lowest score:", np.min(scores))
+
+passed_students = student_avg >= 60
+print("\nPassed students (True = Pass):\n", passed_students)
+
+num_passed = np.sum(passed_students)
+print("\nNumber of students passed:", num_passed)
+
+bonus_scores = scores + 5
+print("\nScores after bonus:\n", bonus_scores)
+
+std_dev = np.std(scores)
+print("\nStandard deviation of scores:", std_dev)
