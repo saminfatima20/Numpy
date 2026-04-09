@@ -1,0 +1,25 @@
+import numpy as np
+
+np.random.seed(0)  # for reproducibility
+scores = np.random.randint(40, 100, size=(5, 3))
+
+print("Student Scores:\n", scores)
+
+student_avg = np.mean(scores, axis=1)
+print("\nAverage score per student:\n", student_avg)
+
+subject_avg = np.mean(scores, axis=0)
+print("\nAverage score per subject:\n", subject_avg)
+
+top_student_index = np.argmax(student_avg)
+print("\nTop performing student index:", top_student_index)
+print("Top student scores:", scores[top_student_index])
+
+print("\nHighest score in class:", np.max(scores))
+print("Lowest score in class:", np.min(scores))
+
+passed_students = np.all(scores >= 50, axis=1)
+print("\nStudents who passed all subjects:", np.sum(passed_students))
+
+sorted_indices = np.argsort(student_avg)[::-1]
+print("\nStudents ranked (best to worst):", sorted_indices)
