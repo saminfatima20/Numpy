@@ -1,0 +1,30 @@
+import numpy as np
+
+marks = np.array([45, 67, 89, 34, 90, 56, 78, 88, 92, 40])
+
+print("Student Marks:", marks)
+
+average = np.mean(marks)
+maximum = np.max(marks)
+minimum = np.min(marks)
+std_dev = np.std(marks)
+
+print("\nAverage Marks:", average)
+print("Highest Marks:", maximum)
+print("Lowest Marks:", minimum)
+print("Standard Deviation:", std_dev)
+
+passed = marks[marks >= 50]
+failed = marks[marks < 50]
+
+print("\nPassed Students Marks:", passed)
+print("Failed Students Marks:", failed)
+
+print("\nNumber of Passed Students:", len(passed))
+print("Number of Failed Students:", len(failed))
+
+sorted_marks = np.sort(marks)
+print("\nSorted Marks:", sorted_marks)
+
+top_3 = sorted_marks[-3:]
+print("Top 3 Marks:", top_3)
