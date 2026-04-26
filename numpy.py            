@@ -1,0 +1,31 @@
+import numpy as np
+
+scores = np.array([78, 85, 62, 90, 55, 88, 76, 95, 67, 80])
+
+print("Student Scores:", scores
+
+average_score = np.mean(scores)
+max_score = np.max(scores)
+min_score = np.min(scores)
+std_dev = np.std(scores)
+
+print("\n--- Statistics ---")
+print("Average Score:", average_score)
+print("Highest Score:", max_score)
+print("Lowest Score:", min_score)
+print("Standard Deviation:", std_dev)
+
+passed = scores[scores >= 60]
+failed = scores[scores < 60]
+
+print("\n--- Results ---")
+print("Passed Students Scores:", passed)
+print("Failed Students Scores:", failed)
+
+normalized_scores = (scores - min_score) / (max_score - min_score)
+
+print("\n--- Normalized Scores ---")
+print(normalized_scores)
+
+bonus_scores = scores + 5
+print("\nScores after bonus:", bonus_scores)
