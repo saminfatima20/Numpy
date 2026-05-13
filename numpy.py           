@@ -1,0 +1,42 @@
+marks = np.array([
+    [85, 78, 92],
+    [76, 81, 79],
+    [90, 88, 95],
+    [69, 72, 70],
+    [88, 84, 91]
+])
+
+print("Student Marks Matrix:")
+print(marks)
+
+student_avg = np.mean(marks, axis=1)
+print("\nAverage Marks per Student:")
+print(student_avg)
+
+subject_avg = np.mean(marks, axis=0)
+print("\nAverage Marks per Subject:")
+print(subject_avg)
+
+highest = np.max(marks)
+lowest = np.min(marks)
+
+print("\nHighest Mark:", highest)
+print("Lowest Mark:", lowest)
+
+std_dev = np.std(marks)
+print("\nStandard Deviation:", std_dev)
+
+top_students = np.where(student_avg > 85)[0]
+
+print("\nTop Students (index numbers):")
+print(top_students)
+
+total_marks = np.sum(marks, axis=1)
+
+print("\nTotal Marks:")
+print(total_marks)
+
+bonus_marks = marks + 5
+
+print("\nMarks After Bonus:")
+print(bonus_marks)
