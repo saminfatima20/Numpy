@@ -1,0 +1,33 @@
+
+marks = np.array([
+    [85, 78, 90],
+    [70, 88, 75],
+    [95, 92, 89],
+    [60, 65, 70],
+    [80, 85, 88]
+])
+
+student_avg = np.mean(marks, axis=1)
+
+subject_avg = np.mean(marks, axis=0)
+
+highest_mark = np.max(marks)
+lowest_mark = np.min(marks)
+
+topper_index = np.argmax(student_avg) + 1
+
+print("Student Marks:")
+print(marks)
+
+print("\nAverage Marks of Each Student:")
+for i, avg in enumerate(student_avg, start=1):
+    print(f"Student {i}: {avg:.2f}")
+
+print("\nAverage Marks of Each Subject:")
+subjects = ["Math", "Science", "English"]
+for subject, avg in zip(subjects, subject_avg):
+    print(f"{subject}: {avg:.2f}")
+
+print("\nHighest Mark:", highest_mark)
+print("Lowest Mark:", lowest_mark)
+print(f"Topper: Student {topper_index}")
